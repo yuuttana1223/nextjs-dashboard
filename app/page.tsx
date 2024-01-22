@@ -4,6 +4,9 @@ import styles from '@/app/ui/home.module.css';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { lusitana } from '@/app/ui/fonts';
+import Image from 'next/image';
+import heroDesktop from '@/public/hero-desktop.png';
+import heroMobile from '@/public/hero-mobile.png';
 
 export default function Page() {
   return (
@@ -35,6 +38,16 @@ export default function Page() {
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
+          <Image
+            src={heroDesktop}
+            className="hidden md:block"
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+          <Image
+            src={heroMobile}
+            className="block md:hidden"
+            alt="Screenshots of the dashboard project showing mobile version"
+          />
         </div>
       </div>
     </main>
