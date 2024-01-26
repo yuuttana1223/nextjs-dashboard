@@ -10,7 +10,7 @@ import {
   RevenueChartSkeleton,
 } from '@/app/ui/skeletons';
 
-// 型が効かないので、一旦コメントアウト
+// TODO: 型が効かないので、一旦コメントアウト
 // export const dynamic = ""
 
 export default async function Page() {
