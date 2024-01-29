@@ -22,7 +22,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     shallow: false,
     throttleMs: 1000,
   });
-  const [page, setPage] = useQueryState('page');
+  const [_page, setPage] = useQueryState('page');
   const handleSearch = (value: string) => {
     if (value === '') {
       // queryが空の場合「?query」を削除する
@@ -41,6 +41,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
         className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
         placeholder={placeholder}
         onChange={(e) => {
+          // 検索するときにページを1に戻す
           setPage('1');
           handleSearch(e.target.value);
         }}
