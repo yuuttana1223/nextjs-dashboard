@@ -14,7 +14,7 @@ export default async function Page({ params }: { params: Params }) {
     fetchCustomers(),
   ]);
 
-  if (!invoic e) {
+  if (!invoice) {
     notFound();
   }
 
